@@ -5,6 +5,7 @@ const port = process.env.Port || 5101;
 
 //middleware
 app.use(cors());
+app.use(express.json())
 
 const users = [
     { id: 1, name: 'Benzema', email: 'ben@gmail.com' },
@@ -23,8 +24,12 @@ app.get('/users', (req, res) => {
 })
 
 app.post('/users', (req, res) => {
-    console.log('Post API hitting')
-    console.log(req.body)
+    console.log('Post API hitting');
+    console.log(req.body);
+    const newUser = req.body;
+    newUser.id = users.length + 1;
+    users.push(newUser);
+    res.send(newUser);
 })
 
 app.listen(port, () => {
