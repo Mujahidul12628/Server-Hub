@@ -1,0 +1,33 @@
+.header-content {
+    background-color: #ebdede;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-link {
+    background: linear-gradient(0deg, rgba(181, 34, 255, 0.7) 0%, rgb(78, 0, 196, 0.6) 100%);
+    font-weight: 500;
+    color: white;
+}
+
+.menu a:hover {
+    background: linear-gradient(0deg, rgba(181, 34, 255, 0.7) 0%, rgb(78, 0, 196, 0.6) 100%);
+    font-weight: 500;
+    color: white;
+}
+
+.navbar-bg {
+    color: white;
+    /* background: linear-gradient(0deg, rgba(180, 42, 247, 1) 0%, rgb(78, 0, 196) 100%); */
+
+    background: linear-gradient(0deg, rgba(181, 34, 255, 0.7) 0%, rgb(78, 0, 196, 0.6) 100%);
+}
+
+.logged-in-out {
+    background: linear-gradient(0deg, rgb(195, 98, 244) 0%, rgb(163, 103, 252) 100%);
+    font-weight: 500;
+    color: white;
+    border: 2px solid rgba(181, 34, 255, 0.7);
+}

@@ -1,0 +1,22 @@
+.submit {
+    width: 120px;
+    padding: 5px;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    margin: 10px auto;
+    background: linear-gradient(138deg, rgb(217, 22, 251) 0%, rgb(116, 91, 255) 100%);
+}
+
+.text-left-align {
+    text-align: left;
+
+}
+
+.box-shadow-carousel {
+    box-shadow: 0 0 4px rgba(198, 0, 233, 0.5);
+}
+
+#box-shad {
+    box-shadow: 0 0 7px rgba(198, 0, 233, 0.5);
+}

@@ -1,0 +1,26 @@
+.btn-bg {
+    background: linear-gradient(138deg, rgb(217, 22, 251) 0%, rgb(116, 91, 255) 100%);
+}
+
+.border-color {
+    border: 2px solid rgb(198, 0, 233);
+}
+
+.box-shadow {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(198, 0, 233, 0.5);
+}
+
+.text-col {
+    color: rgba(225, 0, 255, 1);
+}
+
+.box-shadow-card {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 7px rgba(198, 0, 233, 0.5);
+}
+
+.box-shadow-carousel {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(198, 0, 233, 0.5);
+}
