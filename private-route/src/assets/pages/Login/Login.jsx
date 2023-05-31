@@ -1,6 +1,12 @@
-import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
+import { Result } from 'postcss';
 
 const Login = () => {
+
+    const { signIn } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -9,7 +15,18 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+
         console.log(email, password)
+
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                form.reset()
+            })
+            .catch(error => {
+                console.log("Error:", error)
+            })
 
     }
     return (
@@ -38,6 +55,8 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
+                        <div className='mx-auto mt-3'><span>Haven't any account yet? </span><Link to="/register" className='text-blue-500'> Register</Link></div>
+
                     </div>
                 </form>
             </div>
