@@ -6,7 +6,7 @@ import { Result } from 'postcss';
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -23,6 +23,17 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset()
+            })
+            .catch(error => {
+                console.log("Error:", error)
+            })
+
+    }
+    const handleGoogleSignIn = event => {
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
             })
             .catch(error => {
                 console.log("Error:", error)
@@ -56,6 +67,9 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                         <div className='mx-auto mt-3'><span>Haven't any account yet? </span><Link to="/register" className='text-blue-500'> Register</Link></div>
+                        <div className="form-control mt-6">
+                            <button onClick={handleGoogleSignIn} className="btn btn-danger">Google</button>
+                        </div>
 
                     </div>
                 </form>

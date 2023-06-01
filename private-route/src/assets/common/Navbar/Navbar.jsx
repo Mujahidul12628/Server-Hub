@@ -23,6 +23,12 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <div className="menu menu-horizontal px-1">
                     <Link className='mx-2' to="/">Home</Link>
+                    {
+                        user && <Link className='mx-2' to="/order">Order</Link>
+                    }
+                    {
+                        user && <Link className='mx-2' to="/service">Service</Link>
+                    }
                     <Link className='mx-2' to="/login">Login</Link>
                     <Link className='mx-2' to="/register">Register</Link>
                 </div>
